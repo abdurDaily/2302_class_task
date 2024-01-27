@@ -1,3 +1,4 @@
+
 <?php
 
    session_start();
@@ -47,8 +48,8 @@
 
 
                     <div class="card-header bg-info text-light">List of banner's</div>
-                    <div class="card-nody">
-                        <table class="table table-responsive table-hover table-striped">
+                    <div class="card-nody table-responsive">
+                        <table class="table  table-hover table-striped">
                             <tr>
                                 <td>Sn</td>
                                 <td>tile</td>
@@ -82,7 +83,7 @@
                                     </td>
                                     <td>
                                         <div class="btn-group">
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="./edit.php?editId=<?= $query['id'] ?>" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="./delete.php?id=<?= $query['id'] ?>" class="btn btn-danger btn-sm">Delete</a>
                                         </div>
                                     </td>

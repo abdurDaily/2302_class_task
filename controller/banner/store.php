@@ -11,12 +11,14 @@
    $video_url = $_REQUEST['video_url'];
    $featured_img = $_FILES['featured_img'];
 
+   
 
         if(isset($_REQUEST['banner-btn'])){
             $tmpName = $featured_img['tmp_name'];
             $imgName = uniqid() . '.' . $featured_img['name'];
             $uploadData = move_uploaded_file($tmpName, 'uploads/' .$imgName);
 
+                
               
                if($uploadData){
                    $storeQuery = "INSERT INTO banners(heading, details, button_title, button_url, video_url, featured_img) VALUES ('$title', '$details', '$btn_title', '$btn_link', '$video_url', '$imgName')";
